@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "doc_app_backend": {
+      "candid": "src/doc_app_backend/doc_app_backend.did",
+      "package": "doc_app_backend",
+      "type": "rust"
+    },
+    "doc_app_frontend": {
+      "dependencies": [
+        "doc_app_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/doc_app_frontend/src/index.html"
+      },
+      "source": [
+        "src/doc_app_frontend/assets",
+        "dist/doc_app_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
